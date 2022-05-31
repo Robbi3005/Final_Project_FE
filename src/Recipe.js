@@ -8,7 +8,7 @@ export default function Recipe({ recipe }) {
 
         <div className="recipe">
 
-            <img className="recipe__image" src={recipe["recipe"]["image"]} />
+            <img className="recipe__image" src={recipe["recipe"]["image"]} alt=""/>
 
             <p className="recipe__description">{recipe["recipe"]["label"]}</p>
 

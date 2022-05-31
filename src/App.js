@@ -10,11 +10,12 @@ function App() {
 
   const [query, setquery] = useState("")
   const [recipes, setrecipes] = useState([])
+  const [healthLabels, sethealthLabels] = useState("vegan")
 
-  const YOUR_APP_ID = "0b8862fc";
-  const YOUR_APP_KEY = "08e6e2b163266f8cff67232d4e384bb9";
+  const YOUR_APP_ID = "764df5ff";
+  const YOUR_APP_KEY = "983d0a745875a16074dcc3daeb046021";
 
-  let url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&&health=alcohol-free`
+  let url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&health=${healthLabels}`;
 
   async function getRecipes() {
 
@@ -53,10 +54,79 @@ function App() {
           value="Search"
         />
 
-        <select 
+        <select
           className='app__healthLabels'
-        
-        />
+        >
+
+          <option
+            onClick={() => sethealthLabels("vegan")}>
+            Vegan
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("vegetarian")}>
+            vegetarian
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("paleo")}>
+            paleo
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("dairy-free")}>
+            dairy-free
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("gluten-free")}>
+            gluten-free
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("wheat-free")}>
+            wheat-free
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("low-sugar")}>
+            low-sugar
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("egg-free")}>
+            egg-free
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("peanut-free")}>
+            peanut-free
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("tree-nut-free")}>
+            tree-nut-free
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("soy-free")}>
+            soy-free
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("fish-free")}>
+            fish-free
+          </option>
+
+          <option
+            onClick={() => sethealthLabels("selfish-free")}>
+            selfish-free
+          </option>
+
+
+        </select>
+
+
       </form>
 
       <div className='app__recipe'>
