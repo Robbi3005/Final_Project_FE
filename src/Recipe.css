@@ -10,3 +10,19 @@
     text-align: center;
     margin: 12px 0px;
 }
+
+.recipe__button_show {
+    margin: 12px 4px;
+    background-color: rgb(92, 227, 92);
+    border: 2px solid rgb(92, 227, 92);
+    border-radius: 4px;
+    padding: 6px 1px;
+}
+
+.recipe__button_hide {
+    background-color: grey;
+    color: white;
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 6px 1px;
+}

@@ -123,9 +123,7 @@ function App() {
             selfish-free
           </option>
 
-
         </select>
-
 
       </form>
 
